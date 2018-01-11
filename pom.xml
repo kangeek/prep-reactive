@@ -13,6 +13,7 @@
         <module>netflux-example</module>
         <module>webflux-stock-quote-service</module>
         <module>mongodb-reactive-stock-quote-service</module>
+        <module>java-nio</module>
     </modules>
 
 </project>
