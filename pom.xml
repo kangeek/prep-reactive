@@ -16,6 +16,9 @@
         <module>java-nio</module>
         <module>reactor3</module>
         <module>rabbitmq</module>
+        <module>redis</module>
+        <module>scrawls</module>
+        <module>docker</module>
     </modules>
 
     <dependencies>

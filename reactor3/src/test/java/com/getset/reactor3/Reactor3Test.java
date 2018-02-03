@@ -25,6 +25,11 @@ public class Reactor3Test {
             @Override
             protected void hookOnNext(T value) {
                 System.out.println(value);
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 request(1);
             }
         }
@@ -33,7 +38,7 @@ public class Reactor3Test {
         flux.subscribe(System.out::println,
                 err -> System.out.println("Error: " + err),
                 () -> System.out.println("Done")
-                , s -> ss.request(10)
+                , s -> ss.request(2)
         );
         flux.subscribe(ss);
     }
